@@ -1,6 +1,6 @@
 # Liferay Cloud Upgrade Action
 
-GitHub Action to create a new branch and pull request if a new versions for Liferay Cloud Docker images are available.
+GitHub Action to create a new branch and pull request if new versions for Liferay Cloud Docker images are available.
 
 If you're looking for the same action but for Liferay upgrade, take a look at this: https://github.com/lgdd/liferay-upgrade-action
 
