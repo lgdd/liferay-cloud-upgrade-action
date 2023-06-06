@@ -29,7 +29,7 @@ func main() {
 	gitFetchAll()
 	noUpgradeBranch, _ := strconv.ParseBool(os.Getenv("NO_UPGRADE_BRANCH"))
 	mainBranchName := os.Getenv("GITHUB_REF_NAME")
-	cloudWorkspace := "./cloud-repo"
+	cloudWorkspace := os.Getenv("WORKSPACE_DIRECTORY")
 	dockerImages := getDockerImagesFromLCPFiles(cloudWorkspace)
 	dockerImagesToUpdate := getDockerImagesToUpdate(dockerImages)
 	if len(dockerImagesToUpdate) > 0 {
