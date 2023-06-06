@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1](https://github.com/lgdd/liferay-cloud-upgrade-action/compare/v1.0.0...v1.0.1) (2023-06-06)
+
+
+### Bug Fixes
+
+* add nil check for fileinfo during walk function ([0025dc3](https://github.com/lgdd/liferay-cloud-upgrade-action/commit/0025dc3f2b26aab04c37113a261f2040f7b9e714))
+* **docs:** typo ([4c37503](https://github.com/lgdd/liferay-cloud-upgrade-action/commit/4c3750345616cbb18e76f37257dc5e36169a9cda))
+* unused env for cloud repo directory ([483051a](https://github.com/lgdd/liferay-cloud-upgrade-action/commit/483051a03861cd5aade6e7c90d14249aab39eea8))
+
 ## 1.0.0 (2023-06-06)
 
 
