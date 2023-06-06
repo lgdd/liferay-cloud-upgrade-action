@@ -43,7 +43,7 @@ func main() {
 			updateLCPFileWithLatestVersion(dockerImageToUpdate)
 			writeMarkdownTableRow(&pullRequestBodyBuilder, &dockerImageToUpdate)
 		}
-		gitCommitAndPush(cloudWorkspace)
+		gitCommitAndPush(dockerImagesToUpdate)
 		pullRequestTitle := "[Liferay Cloud Upgrade] New versions for Docker images"
 		pullRequestBody := pullRequestBodyBuilder.String()
 		createOrEditPullRequest(mainBranchName, pullRequestTitle, pullRequestBody)
@@ -96,8 +96,10 @@ func gitSwitchBranch(noUpgradeBranch bool) {
 	}
 }
 
-func gitCommitAndPush(path string) {
-	runCmd("git", "add", path)
+func gitCommitAndPush(dockerImagesToUpdate []DockerImage) {
+	for _, dockerImageToUpdate := range dockerImagesToUpdate {
+		runCmd("git", "add", dockerImageToUpdate.Path)
+	}
 
 	cmd := exec.Command("git", "diff-index", "--quiet", "HEAD")
 	cmd.Stdout = os.Stdout
