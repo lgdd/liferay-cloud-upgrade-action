@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/lgdd/liferay-cloud-upgrade-action/compare/v1.0.1...v1.0.2) (2023-06-06)
+
+
+### Bug Fixes
+
+* limit git commit to LCP files ([8fd3ddd](https://github.com/lgdd/liferay-cloud-upgrade-action/commit/8fd3dddf6bd2db80815b077c04ae830d0ef93b63))
+
 ## [1.0.1](https://github.com/lgdd/liferay-cloud-upgrade-action/compare/v1.0.0...v1.0.1) (2023-06-06)
 
 
