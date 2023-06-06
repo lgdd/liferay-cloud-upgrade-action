@@ -26,7 +26,7 @@ runs:
       run: |
         NO_UPGRADE_BRANCH=$(git ls-remote -q | grep -q '${{ env.UPGRADE_BRANCH_NAME }}' && echo false || echo true)
         echo "NO_UPGRADE_BRANCH=$NO_UPGRADE_BRANCH" >> $GITHUB_ENV
-    - run: go run ${{ env.GITHUB_ACTION_PATH }}/main.go
+    - run: go run ${{ github.action_path }}/main.go
       shell: bash
       env:
         GH_TOKEN: ${{ github.token }}
