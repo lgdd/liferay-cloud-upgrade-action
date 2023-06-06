@@ -163,7 +163,7 @@ func getDockerImagesToUpdate(dockerImages []DockerImage) []DockerImage {
 func getDockerImagesFromLCPFiles(rootPath string) []DockerImage {
 	var dockerImages []DockerImage
 	filepath.Walk(rootPath, func(path string, info fs.FileInfo, err error) error {
-		if !info.IsDir() && info.Name() == "LCP.json" {
+		if info != nil && !info.IsDir() && info.Name() == "LCP.json" {
 			if dockerImage, err := getDockerImageFromLCP(path); err == nil {
 				dockerImages = append(dockerImages, dockerImage)
 			} else {
