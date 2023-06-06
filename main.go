@@ -228,7 +228,7 @@ func fetchDockerHubResultForLatestStable(dockerImage DockerImage) (DockerHubResu
 	}
 
 	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 
 	var response DockerHubResponse
 	json.Unmarshal(body, &response)
